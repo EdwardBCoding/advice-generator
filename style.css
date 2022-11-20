@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@600;800&display=swap');
+@import url(reset.css);
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+:root{
+    --font: 'Manrope', sans-serif;
+    --blue: hsl(193, 38%, 86%);
+    --green: hsl(150, 100%, 66%);
+    --slate: hsl(217, 19%, 38%);
+    --dark-slate: hsl(217, 19%, 24%);
+    --dark-blue: hsl(218, 23%, 16%);
+}
+
+/* FONTS AND COLORS */
+
+body{
+    font-family: var(--font);
+    font-size: 14px;
+    background-color: var(--dark-blue);
+}
+
+main{
+    background-color: var(--dark-slate);
+    text-align: center;
+}
+
+.advice-id-section{
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    color: var(--green);
+    font-weight: 600;
+}
+
+.advice-text-section{
+    font-size: 1.6rem;
+    color: var(--blue);
+}
+
+.reroll-button{
+    background-color: var(--green);
+}
+
+/* LAYOUTS */
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+main{
+    margin: 1rem;
+    max-width: 21rem;
+    border-radius: 5%;
+    padding: 1rem;
+}
+
+
+/* FOOTER */
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    position: fixed;
+    bottom: 0.5%;
+    width: 100%;
+    color: hsl(279, 6%, 55%);
+}
+
+.attribution a {
+    color: hsl(228, 33%, 46%);
+}
