@@ -58,7 +58,20 @@ main{
     margin: 1rem;
     max-width: 21rem;
     border-radius: 5%;
-    padding: 1rem;
+    padding: 2rem 1rem 0;
+}
+
+.reroll-button{
+    transform: translateY(1rem);
+    padding: 0.5rem;
+    border-radius: 50%;
+}
+
+.reroll-button>img{
+    pointer-events: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 
