@@ -17,7 +17,7 @@ function test(){
 }
 
 function fetchAdvice(){
-    fetch('https://api.adviceslip.com/advice')
+    fetch('https://api.adviceslip.com/advice/117')
     // .then(res => {
     // if(res.ok){
     //     console.log('yay')
@@ -33,7 +33,7 @@ function fetchAdvice(){
 function writeAdvice(data){
     // console.log(data)
     let adv = data.slip.advice
-    adviceText.innerText = adv
+    adviceText.innerText = "\"" + adv + "\""
     let advId = data.slip.id
     adviceIdText.innerText = advId
 }
