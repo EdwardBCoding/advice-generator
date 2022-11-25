@@ -94,6 +94,11 @@ main{
     box-shadow: 0 0 2rem var(--green);
 }
 
+.reroll-button:focus{
+    -webkit-tap-highlight-color: transparent;
+    outline: none;
+}
+
 .active{
     animation: roll 0.5s 1 forwards;
 }
