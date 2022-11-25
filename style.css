@@ -20,12 +20,15 @@
 body{
     font-family: var(--font);
     font-size: 14px;
-    background-color: var(--dark-blue);
 }
 
 main{
-    background-color: var(--dark-slate);
+    background-color: var(--dark-blue);
     text-align: center;
+}
+
+.content-wrapper{
+    background-color: var(--dark-slate);
 }
 
 .advice-id-section{
@@ -47,24 +50,37 @@ main{
 
 /* LAYOUTS */
 
-body{
+main{
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
+    
 }
 
-main{
+.content-wrapper{
     margin: 1rem;
-    max-width: 21rem;
-    border-radius: 5%;
+    /* max-width: 22rem; */
+    max-width: 30rem;
+    border-radius: 4%;
     padding: 2rem 1rem 0;
 }
 
+.advice-id-section{
+    padding-top: 1rem;
+    padding-bottom: 0.5rem;
+}
+
+.advice-text-section{
+    margin: 0.2rem;
+}
+
 .reroll-button{
-    transform: translateY(1rem);
-    padding: 0.5rem;
+    transform: translateY(1.5rem);
+    padding: 1rem;
     border-radius: 50%;
+    cursor: pointer;
+    transition: 0.5s;
 }
 
 .reroll-button>img{
@@ -72,6 +88,38 @@ main{
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.reroll-button:hover{
+    box-shadow: 0 0 2rem var(--green);
+}
+
+.active{
+    animation: roll 0.5s 1 forwards;
+}
+
+
+@keyframes roll{
+    0%{
+        transform: translateY(1.5rem) rotate(0deg);
+        transform-origin: center;
+    }
+    100%{
+        transform: translateY(1.5rem) rotate(180deg);
+        transform-origin: center;
+    }
+}
+
+/* QUERIES */
+
+@media (min-width: 450px){
+    .content-wrapper{
+        padding: 2rem 2rem 0;
+        box-shadow: 1rem 1.5rem 2.5rem hsl(220, 31%, 13%);
+    }
+    .advice-text-section{
+        margin-bottom: 1rem;
+    }
 }
 
 

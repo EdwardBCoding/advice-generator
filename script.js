@@ -2,22 +2,30 @@
 
 const adviceText = document.querySelector('.advice-text')
 const adviceIdText = document.querySelector('.advice-id')
-const body = document.querySelector('body')
+// const body = document.querySelector('body')
 const rerollButton = document.querySelector('.reroll-button')
 
 //! Listeners
 
 document.addEventListener('DOMContentLoaded', fetchAdvice)
-rerollButton.addEventListener('click', fetchAdvice)
+rerollButton.addEventListener('click', reroll)
 
 //! Functions
 
 function test(){
-    console.log('weener')
+    console.log('weee gotttaaa problem')
+}
+
+function reroll(){
+    rerollButton.classList.add('active')
+    rerollButton.addEventListener('animationend', () =>{
+        fetchAdvice()
+        rerollButton.classList.remove('active')
+    })
 }
 
 function fetchAdvice(){
-    fetch('https://api.adviceslip.com/advice/117')
+    fetch('https://api.adviceslip.com/advice')
     // .then(res => {
     // if(res.ok){
     //     console.log('yay')
